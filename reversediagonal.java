@@ -1,22 +1,19 @@
 import java.util.ArrayList;
 
 /**
+ * Reverses a sqaure matrix.
  * Created by kylel95 on 3/27/18.
  */
 public class reversediagonal {
     public static void main(String [] args){
-       /* int[][] arr = new int[][]{
+        int[][] arr = new int[][]{
                 {1, 2, 3},
                 {4, 5, 6},
                 {7, 8, 9}
+
         };
-        arr = diagreverse(arr);
-        for(int i = 0; i < arr.length; i++){
-            for(int j = 0; j < arr.length; j++){
-                System.out.println(arr[i][j]);
-        }
-        }
-        */
+        printArray(arr);
+
     }
 
     /**
@@ -51,6 +48,32 @@ public class reversediagonal {
             rightIndex++;
         }
         return arr;
+
+    }
+    /**
+     * Prints the reversed the 2d array
+     * @param arr 2d array
+     */
+    public static void printArray(int[][] arr){
+        if(arr.length == 0){
+            System.out.print("Empty array.");
+            return;
+        }
+        int count = -1;
+        arr = diagreverse(arr);
+        for(int i = 0; i < arr.length; i++){
+            for(int j = 0; j < arr.length; j++){
+                count++;
+                System.out.print(arr[i][j] + " ");
+                if(count == arr.length - 1)
+                {
+                    System.out.println("");
+                    count = -1;
+                }
+
+
+            }
+        }
 
     }
 }
