@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 
 /**
- * Reverses a sqaure matrix.
+ * Reverses a square matrix.
  * Created by kylel95 on 3/27/18.
  */
 public class reversediagonal {
